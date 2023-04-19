@@ -24,8 +24,9 @@ $roll.addEventListener("click", () => {
 })
 
 $showAllRolls.addEventListener("click", () => {
+	$rolls.innerHTML = ""
 	for (let dieRoll of dieRolls) {
-		$rolls.innerHTML += `<li>${dieRoll}</li>`
+		$rolls.innerHTML += `<li class="die">${dieRoll}</li>`
 	}
 })
 

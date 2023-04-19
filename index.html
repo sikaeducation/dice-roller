@@ -10,17 +10,22 @@
 </head>
 
 <body>
-	<label for="count">Enter a number of dice:</label>
+	<h1>Dice Roller</h1>
+	<label id="count-label" for="count">Enter a number of dice:</label>
 	<input type="number" min="1" id="count" name="count" value="1">
 	<button id="roll" type="button">
 		Roll!
 	</button>
 
-	<label for="total">Total:</label>
-	<output id="total"></output>
+	<fieldset id="total-control">
+		<label for="total">Total:</label>
+		<output id="total"></output>
+	</fieldset>
 
-	<button id="show-all-rolls" type="button">Show All Rolls</button>
-	<ol id="rolls"></ol>
+	<fieldset id="rolls-control">
+		<button id="show-all-rolls" type="button">Show All Rolls</button>
+		<ol id="rolls"></ol>
+	</fieldset>
 
 	<button type="button" id="reset">Reset</button>
 </body>
