@@ -2,7 +2,7 @@ const dieRolls = []
 
 const rollButton = document.querySelector("#roll")
 rollButton.addEventListener("click", () => {
-	const $rollCount = document.querySelector("#roll-count")
+	const $rollCount = document.querySelector("#count")
 	const rollCount = $rollCount.value
 
 	for (let countsRemaining = rollCount; countsRemaining > 0; countsRemaining--) {
@@ -15,11 +15,11 @@ rollButton.addEventListener("click", () => {
 		sum += dieRoll
 	}
 
-	document.querySelector("#total-count").textContent = sum
+	document.querySelector("#total").textContent = sum
 })
 
 const showAllRollsButton = document.querySelector("#show-all-rolls")
-const allRolls = document.querySelector("#all-rolls")
+const allRolls = document.querySelector("#rolls")
 showAllRollsButton.addEventListener("click", () => {
 	for (let dieRoll of dieRolls) {
 		allRolls.innerHTML += `<li>${dieRoll}</li>`
