@@ -1,10 +1,11 @@
-const dieRolls = []
+let dieRolls = []
 
 const $roll = document.querySelector("#roll")
 const $count = document.querySelector("#count")
 const $showAllRolls = document.querySelector("#show-all-rolls")
 const $rolls = document.querySelector("#rolls")
 const $total = document.querySelector("#total")
+const $reset = document.querySelector("#reset")
 
 $roll.addEventListener("click", () => {
 	const rollCount = $count.value
@@ -27,3 +28,14 @@ $showAllRolls.addEventListener("click", () => {
 		$rolls.innerHTML += `<li>${dieRoll}</li>`
 	}
 })
+
+$reset.addEventListener("click", () => {
+	initialize()
+})
+
+function initialize() {
+	dieRolls = []
+	$total.innerHTML = ""
+	$rolls.innerHTML = ""
+	$count.value = 1
+}
