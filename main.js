@@ -1,6 +1,8 @@
 let dieRolls = []
+let sides = 6
 
 const $roll = document.querySelector("#roll")
+const $sides = document.querySelector("#sides")
 const $count = document.querySelector("#count")
 const $showAllRolls = document.querySelector("#show-all-rolls")
 const $rolls = document.querySelector("#rolls")
@@ -8,10 +10,11 @@ const $total = document.querySelector("#total")
 const $reset = document.querySelector("#reset")
 
 $roll.addEventListener("click", () => {
+	const sides = $sides.value
 	const rollCount = $count.value
 
 	for (let countsRemaining = rollCount; countsRemaining > 0; countsRemaining--) {
-		const randomNumber = Math.ceil(Math.random() * 6)
+		const randomNumber = Math.ceil(Math.random() * sides)
 		dieRolls.push(randomNumber)
 	}
 
