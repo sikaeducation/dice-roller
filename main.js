@@ -7,7 +7,7 @@ const $rolls = document.querySelector("#rolls")
 const $total = document.querySelector("#total")
 
 $roll.addEventListener("click", () => {
-	const rollCount = $rollCount.value
+	const rollCount = $count.value
 
 	for (let countsRemaining = rollCount; countsRemaining > 0; countsRemaining--) {
 		const randomNumber = Math.ceil(Math.random() * 6)
